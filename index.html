@@ -3,10 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Payoo</title>
+
+    <!-- desyui link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind css  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
-    <h1 class="text-red-700">hellow</h1>
+  <!-- bg-[#f4f5f7] -->
+  <body class="bg-[#e7ecf6] h-[100vh] flex justify-center items-center">
+    <form class="bg-white rounded-2xl p-4">
+        <div class="mb-2">
+          <lebal>Mobile Number</lebal>
+          <br>
+          <input type="text" placeholder="Enter your number" class="input input-primary bg-[#e7ecf6]" />
+        </div>
+        <div class="mb-2">
+          <lebal>4 Digit Pin</lebal>
+          <br>
+          <input type="text" placeholder="Enter 4 Digit Pin" class="input input-primary bg-[#e7ecf6]" />
+        </div>
+        <button class="btn btn-primary w-full rounded-[20px]">Login</button>
+    </form>
   </body>
 </html>
