@@ -26,7 +26,7 @@
         <div class="flex justify-start items-center">
           <img src="./assets/Group.png" alt="" />
           <div class="text">
-            <h1>145000</h1>
+            <h1>$<span id="avableBalance">45000</span></h1>
             <p>Available Balance</p>
           </div>
         </div>
@@ -42,40 +42,38 @@
           is low and
         </p>
       </div>
-      <div
-        class="gap-2 grid grid-cols-3 grid-rows-2 mx-auto min-h-[200px] max-w-lg"
-      >
+      <div class="gap-2 grid grid-cols-3 grid-rows-2 mx-auto min-h-[200px] max-w-lg">
         <div class="rounded-xl border-2 border-red-600 p-3 text-center">
           <img class="mx-auto" src="./assets/wallet1.png" alt="" />
           <h1>Add Money</h1>
         </div>
         <div class="rounded-xl border-2 border-red-600 p-3 text-center">
-          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
-          <h1>Add Money</h1>
+          <img class="mx-auto" src="./assets/send1.png" alt="" />
+          <h1>Cashout</h1>
         </div>
         <div class="rounded-xl border-2 border-red-600 p-3 text-center">
-          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
-          <h1>Add Money</h1>
+          <img class="mx-auto" src="./assets/money1.png" alt="" />
+          <h1>Transfer Money</h1>
         </div>
         <div class="rounded-xl border-2 border-red-600 p-3 text-center">
-          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
-          <h1>Add Money</h1>
+          <img class="mx-auto" src="./assets/bonus1.png" alt="" />
+          <h1>Get Bonus</h1>
         </div>
         <div class="rounded-xl border-2 border-red-600 p-3 text-center">
-          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
-          <h1>Add Money</h1>
+          <img class="mx-auto" src="./assets/purse1.png" alt="" />
+          <h1>Pay Bill</h1>
         </div>
         <div class="rounded-xl border-2 border-red-600 p-3 text-center">
-          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
-          <h1>Add Money</h1>
+          <img class="mx-auto" src="./assets/transaction1.png" alt="" />
+          <h1>Transactions</h1>
         </div>
       </div>
       <div class="all_form_section max-w-lg mx-auto mt-5">
-        <h1>Add Money</h1>
+        <h1 class="mb-4 font-bold">Add Money</h1>
         <form action="" class="bg-white p-8 rounded-2xl">
           <div class="">
             <h1>Select A Bank</h1>
-            <select class="select select-primary w-full rounded-3xl">
+            <select id="bank" class="select select-primary w-full rounded-3xl">
               <option disabled selected>Select A Bank</option>
               <option>VScode</option>
               <option>VScode fork</option>
@@ -87,7 +85,7 @@
             <br />
             <input
               type="text"
-              id="mobileNumber"
+              id="bank_account_number"
               placeholder="Enter 11 digit account number"
               class="w-full rounded-3xl input input-primary bg-[#e7ecf6]"
             />
@@ -97,7 +95,7 @@
             <br />
             <input
               type="text"
-              id="mobileNumber"
+              id="add_amount"
               placeholder="Add Amount to withdraw"
               class="w-full rounded-3xl input input-primary bg-[#e7ecf6]"
             />
@@ -107,16 +105,17 @@
             <br />
             <input
               type="text"
-              id="mobileNumber"
+              id="pin_number"
               placeholder="Enter 4 digit pin number"
               class="w-full rounded-3xl input input-primary bg-[#e7ecf6]"
             />
           </div>
-          <button id="login" class="mt-4 btn btn-primary w-full rounded-[20px]">
+          <button id="add_money" class="mt-4 btn btn-primary w-full rounded-[20px]">
             Add Money
           </button>
         </form>
       </div>
     </div>
+    <script src="home.js"></script>
   </body>
 </html>
