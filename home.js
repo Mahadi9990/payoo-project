@@ -1,10 +1,20 @@
+function getInputValue (id){
+    const totalValue = parseInt(document.getElementById(id).value)
+    return totalValue
+}
+function getTextValue (id){
+    const totalTextValue = document.getElementById(id)
+    return totalTextValue
+}
+
+
 document.getElementById("add_money").addEventListener("click",function(e){
     e.preventDefault()
     const validPin = 1234;
-    const bank  = document.getElementById("bank").value
-    const account = document.getElementById("bank_account_number").value
-    const addMoney = parseInt(document.getElementById("add_amount").value)
-    const pinNumber = parseInt(document.getElementById("pin_number").value)
+    const bank  = getTextValue("bank")
+    const account = getTextValue("bank_account_number")
+    const addMoney =getInputValue("add_amount")
+    const pinNumber = getInputValue("pin_number")
     const avableBalance = parseInt(document.getElementById("avableBalance").innerText)
 
     if( account.length < 11){
@@ -22,9 +32,11 @@ document.getElementById("add_money").addEventListener("click",function(e){
 document.getElementById("cashout_add_money").addEventListener("click",function(e){
     e.preventDefault()
     const validPin = 1234;
-    const account = document.getElementById("cashout_bank_account_number").value
-    const addMoney = parseInt(document.getElementById("cashout_add_amount").value)
-    const pinNumber = parseInt(document.getElementById("cashout_pin_number").value)
+
+    const account = getTextValue("cashout_add_amount")
+    const addMoney =getInputValue("cashout_add_amount")
+    const pinNumber = getInputValue("cashout_pin_number")
+
     const avableBalance = parseInt(document.getElementById("avableBalance").innerText)
 
     if( account.length < 11){
