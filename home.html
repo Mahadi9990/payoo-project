@@ -42,42 +42,35 @@
           is low and
         </p>
       </div>
-      <div
-        class="gap-2 grid grid-cols-3 grid-rows-2 mx-auto min-h-[200px] max-w-lg"
-      >
-        <div
-          id="add_money_button"
-          class="rounded-xl border-2 border-red-600 p-3 text-center"
-        >
+      <div class="gap-2 grid grid-cols-3 grid-rows-2 mx-auto min-h-[200px] max-w-lg" >
+        <div id="add_money_button"
+          class="rounded-xl border-2 border-red-600 p-3 text-center">
           <img class="mx-auto" src="./assets/wallet1.png" alt="" />
           <h1>Add Money</h1>
         </div>
-        <div
-          id="cashOut_button"
-          class="rounded-xl border-2 border-red-600 p-3 text-center"
-        >
+        <div id="cashOut_button" class="rounded-xl border-2 border-red-600 p-3 text-center">
           <img class="mx-auto" src="./assets/send1.png" alt="" />
           <h1>Cashout</h1>
         </div>
-        <div class="rounded-xl border-2 border-red-600 p-3 text-center">
+        <div id="transfer_Money_button" class="rounded-xl border-2 border-red-600 p-3 text-center">
           <img class="mx-auto" src="./assets/money1.png" alt="" />
           <h1>Transfer Money</h1>
         </div>
-        <div class="rounded-xl border-2 border-red-600 p-3 text-center">
+        <div id="get_Bonus_button" class="rounded-xl border-2 border-red-600 p-3 text-center">
           <img class="mx-auto" src="./assets/bonus1.png" alt="" />
           <h1>Get Bonus</h1>
         </div>
-        <div class="rounded-xl border-2 border-red-600 p-3 text-center">
+        <div id="pay_Bill_button" class="rounded-xl border-2 border-red-600 p-3 text-center">
           <img class="mx-auto" src="./assets/purse1.png" alt="" />
           <h1>Pay Bill</h1>
         </div>
-        <div class="rounded-xl border-2 border-red-600 p-3 text-center">
+        <div id="transactions_button" class="rounded-xl border-2 border-red-600 p-3 text-center">
           <img class="mx-auto" src="./assets/transaction1.png" alt="" />
           <h1>Transactions</h1>
         </div>
       </div>
       <div class="all_form_section max-w-lg mx-auto mt-5">
-        <div id="add_money_parents"  class="">
+        <div id="add_money_parents" class="form" style="display: block"  >
           <h1 class="mb-4 font-bold">Add Money</h1>
           <form action="" class="bg-white p-8 rounded-2xl">
             <div class="">
@@ -130,7 +123,7 @@
             </button>
           </form>
         </div>
-        <div id="chachOut_parents" style="display: none">
+        <div id="chachOut_parents" class="form" >
           <h1 class="font-bold">CashOut</h1>
           <form action="" class="bg-white p-8 rounded-2xl">
             <div class="">
@@ -171,6 +164,47 @@
             </button>
           </form>
         </div>
+        <div id="transfer_Money_parents" class="form">
+          <h1 class="font-bold">Transfer</h1>
+          <form action="" class="bg-white p-8 rounded-2xl">
+            <div class="">
+              <lebal>Bank Account Number</lebal>
+              <br />
+              <input
+                type="text"
+                id="transfer_bank_account_number"
+                placeholder="Enter 11 digit account number"
+                class="w-full rounded-3xl input input-primary bg-[#e7ecf6]"
+              />
+            </div>
+            <div class="">
+              <lebal>Pin Number</lebal>
+              <br />
+              <input
+                type="text"
+                id="transfer_pin_number"
+                placeholder="Enter 4 digit pin number"
+                class="w-full rounded-3xl input input-primary bg-[#e7ecf6]"
+              />
+            </div>
+            <button
+              id="transfer_money"
+              class="mt-4 btn btn-primary w-full rounded-[20px]"
+            >
+              Transfer Money
+            </button>
+          </form>
+        </div>
+        <div id="get_Bonus_parents" class="form">
+          <h1 class="font-bold">Get Bonus</h1>
+        </div>
+        <div id="pay_Bill_parents" class="form">
+          <h1 class="font-bold">Pay Bill</h1>
+        </div>
+        <div id="transactions_parents" class="form">
+          <h1 class="font-bold">Transactions</h1>
+        </div>
+       
       </div>
     </div>
     <script src="home.js"></script>

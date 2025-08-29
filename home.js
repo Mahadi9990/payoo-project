@@ -6,7 +6,9 @@ function getTextValue (id){
     const totalTextValue = document.getElementById(id)
     return totalTextValue
 }
-
+function getAvableBalance(value){
+    document.getElementById("avableBalance").innerText = value
+}
 
 document.getElementById("add_money").addEventListener("click",function(e){
     e.preventDefault()
@@ -27,7 +29,7 @@ document.getElementById("add_money").addEventListener("click",function(e){
     }
 
     const totalBalance = addMoney + avableBalance
-    document.getElementById("avableBalance").innerText = totalBalance
+    getAvableBalance(totalBalance)
 })
 document.getElementById("cashout_add_money").addEventListener("click",function(e){
     e.preventDefault()
@@ -49,15 +51,32 @@ document.getElementById("cashout_add_money").addEventListener("click",function(e
     }
 
     const totalBalance = avableBalance - addMoney
-    document.getElementById("avableBalance").innerText = totalBalance
+    getAvableBalance(totalBalance)
 })
 
+function getToguleMenu (id){
+   const forms = document.getElementsByClassName("form")
+   for(const item of forms ) {
+    item.style.display = 'none'
+   }
+   document.getElementById(id).style.display = "block"
+}
 
 document.getElementById("add_money_button").addEventListener("click",()=>{
-    document.getElementById("add_money_parents").style.display = "block"
-    document.getElementById("chachOut_parents").style.display = "none"
+    getToguleMenu("add_money_parents")
 })
 document.getElementById("cashOut_button").addEventListener("click",()=>{
-    document.getElementById("add_money_parents").style.display = "none"
-    document.getElementById("chachOut_parents").style.display = "block"
+    getToguleMenu("chachOut_parents")
+})
+document.getElementById("transfer_Money_button").addEventListener("click",()=>{
+    getToguleMenu("transfer_Money_parents")
+})
+document.getElementById("get_Bonus_button").addEventListener("click",()=>{
+    getToguleMenu("get_Bonus_parents")
+})
+document.getElementById("pay_Bill_button").addEventListener("click",()=>{
+    getToguleMenu("pay_Bill_parents")
+})
+document.getElementById("transactions_button").addEventListener("click",()=>{
+    getToguleMenu("transactions_parents")
 })
